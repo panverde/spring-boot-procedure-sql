@@ -2,12 +2,11 @@ package com.example.demo.service.impl;
 
 import com.example.demo.model.DeltRequest;
 import com.example.demo.model.DeltResponse;
-import com.example.demo.model.Error;
+import com.example.demo.model.Mesagge;
 import com.example.demo.model.LotDetail;
 import com.example.demo.service.DeltService;
 import io.reactivex.Observable;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.sql.*;
@@ -27,7 +26,7 @@ public class DeltServiceImpl implements DeltService {
     public Observable<DeltResponse> setLotInDelt(/*Connection conn,*/ DeltRequest request) throws SQLException {
 
         DeltResponse deltResponse = new DeltResponse();
-        Error msj = new Error();
+        Mesagge msj = new Mesagge();
 
 
         Connection conn= DriverManager.getConnection(/*"${spring.datasource.url}"*/url,/*"{spring.datasource.username}"*/user
@@ -72,7 +71,7 @@ public class DeltServiceImpl implements DeltService {
                 e.printStackTrace();
             }
         }
-        deltResponse.setError(msj);
+        deltResponse.setMesagge(msj);
 
         return Observable.just(deltResponse);
     }

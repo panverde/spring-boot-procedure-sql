@@ -8,5 +8,5 @@ import lombok.ToString;
 @Setter
 @ToString
 public class DeltResponse {
-    private Error error;
+    private Mesagge mesagge;
 }

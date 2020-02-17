@@ -7,16 +7,16 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Error {
+public class Mesagge {
 
     private String code;
     private String description;
 
-    public Error() {
+    public Mesagge() {
 
     }
 
-    public Error(String code, String description) {
+    public Mesagge(String code, String description) {
         this.code = code;
         this.description = description;
     }
