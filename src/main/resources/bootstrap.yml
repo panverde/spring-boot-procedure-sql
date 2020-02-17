@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: 'jdbc:sqlserver://DESKTOP-4P32M5K:1433;databaseName=testdatabase'
+    username: 'conexo'
+    password: 'Joaquin06'
+    driverClassName: 'com.microsoft.sqlserver.jdbc.SQLServerDriver'

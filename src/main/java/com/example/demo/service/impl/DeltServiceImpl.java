@@ -7,6 +7,7 @@ import com.example.demo.model.LotDetail;
 import com.example.demo.service.DeltService;
 import io.reactivex.Observable;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.sql.*;
@@ -16,7 +17,8 @@ import java.sql.*;
 public class DeltServiceImpl implements DeltService {
 
     private String blankSpace = " ";
-    private String url = "jdbc:sqlserver://DESKTOP-4P32M5K:1433;databaseName=testdatabase";
+    @Value("${spring.datasource.url}")
+    private String url; /*= "jdbc:sqlserver://DESKTOP-4P32M5K:1433;databaseName=testdatabase";*/
     private String user="conexo";
     private String pass = "Joaquin06";
 
